@@ -1,6 +1,6 @@
 import { getAllProducts } from '../../../services/getProductsService'
 
-describe('Feature: List Products', () => {
+describe('Feature: List All Products', () => {
   it('Scenario: List all products with default pagination (up to 30 items)', () => {
     // Given
     cy.log('Given the product API is up and running')
