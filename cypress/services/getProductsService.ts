@@ -11,3 +11,29 @@ export const getProductsWithPagination = (limit: number, skip: number) => {
     url: `/products?limit=${limit}&skip=${skip}`
   })
 }
+
+export const getAllProductsLimitZero = (queryParams = '') => {
+  return cy.request({
+    method: 'GET',
+    url: `/products${queryParams}`,
+  })
+}
+
+
+export function getProductById(id: number) {
+  return cy.request({
+    method: 'GET',
+    url: `/products/${id}`,
+    failOnStatusCode: false,
+  })
+}
+
+export function searchProductsByTerm(term: string) {
+  return cy.request({
+    method: 'GET',
+    url: `/products/search?q=${term}`,
+    failOnStatusCode: false,
+  });
+}
+
+
