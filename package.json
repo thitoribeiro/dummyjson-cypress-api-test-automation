@@ -1,0 +1,27 @@
+{
+  "name": "dummyjson-cypress-api-test-automation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thitoribeiro/dummyjson-cypress-api-test-automation.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/thitoribeiro/dummyjson-cypress-api-test-automation/issues"
+  },
+  "homepage": "https://github.com/thitoribeiro/dummyjson-cypress-api-test-automation#readme",
+  "devDependencies": {
+    "cypress": "^14.5.3",
+    "cypress-mochawesome-reporter": "^4.0.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.2"
+  }
+}
