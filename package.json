@@ -10,7 +10,8 @@
     "test:docker:one": "docker-compose run tests npx cypress run --spec",
     "test:docker:one:report": "npm run test:docker:one --",
     "report:open": "open mochawesome-report/index.html",
-    "test:docker:report": "npm run test:docker && npm run report:open"
+    "test:docker:report": "npm run test:docker && npm run report:open",
+    "test:open:report": "npm run test:docker:one -- cypress/integration/api/products/get-list-all-products.spec.ts && npm run report:open"
   },
   "repository": {
     "type": "git",
