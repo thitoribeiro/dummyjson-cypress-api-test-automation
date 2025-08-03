@@ -1,3 +1,9 @@
+# Cypress
+/mochawesome-report/
+/cypress/videos/
+/cypress/screenshots/
+cypress.env.json
+
 # Logs
 logs
 *.log

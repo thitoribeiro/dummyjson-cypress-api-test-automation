@@ -1,0 +1,8 @@
+services:
+  tests:
+    build: .
+    image: dummyjson-cypress-api-test-automation
+    container_name: cypress-tests
+    working_dir: /app
+    volumes:
+      - .:/app

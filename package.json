@@ -4,7 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test:headless": "npx cypress run",
+    "test:ui": "npx cypress open",
+    "test:docker": "docker-compose up --build",
+    "test:docker:one": "docker-compose run tests npx cypress run --spec",
+    "test:docker:one:report": "npm run test:docker:one --",
+    "report:open": "open mochawesome-report/index.html",
+    "test:docker:report": "npm run test:docker && npm run report:open"
   },
   "repository": {
     "type": "git",
@@ -21,6 +27,7 @@
   "devDependencies": {
     "cypress": "^14.5.3",
     "cypress-mochawesome-reporter": "^4.0.0",
+    "cypress-terminal-report": "^7.2.1",
     "ts-node": "^10.9.2",
     "typescript": "^5.9.2"
   }
