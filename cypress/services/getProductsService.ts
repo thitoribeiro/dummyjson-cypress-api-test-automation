@@ -36,4 +36,13 @@ export function searchProductsByTerm(term: string) {
   });
 }
 
+export function getProductsWithSelectedFields(fields: string) {
+  return cy.request({
+    method: 'GET',
+    url: `/products?select=${fields}`,
+    failOnStatusCode: false,
+  })
+}
+
+
 
