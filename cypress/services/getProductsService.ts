@@ -52,6 +52,30 @@ export function getProductsSorted(sortBy: string, order: string) {
   })
 }
 
+export const getProductsCategories = () => {
+  return cy.request({
+    method: 'GET',
+    url: '/products/categories'
+  });
+};
+
+export const getCategoryList = () => {
+  return cy.request({
+    method: 'GET',
+    url: '/products/category-list'
+  });
+};
+
+export const getProductsByCategory = (category: string) => {
+  return cy.request({
+    method: 'GET',
+    url: `/products/category/${category}`
+  });
+};
+
+
+
+
 
 
 
