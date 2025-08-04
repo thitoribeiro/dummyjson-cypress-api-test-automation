@@ -29,8 +29,8 @@
     "test:spec:post-add-product-invalid-data": "docker-compose run tests npx cypress run --spec cypress/integration/api/products/post-add-product-invalid-data.spec.ts && npm run report:open",
     "test:spec:get-products-sorted-by-invalid-field": "docker-compose run tests npx cypress run --spec cypress/integration/api/products/get-products-sorted-by-invalid-field.spec.ts && npm run report:open",
 
-    "test:products:get": "docker-compose run tests npx cypress run --spec "cypress/integration/api/products/*.spec.ts" && npm run report:open",
-    "test:products:sort": "docker-compose run tests npx cypress run --spec "cypress/integration/api/products/get-products-sorted-by-title-asc.spec.ts,cypress/integration/api/products/get-products-sorted-by-title-desc.spec.ts,cypress/integration/api/products/get-products-sorted-by-invalid-field.spec.ts" && npm run report:open",
+    "test:products:get": "docker-compose run tests npx cypress run --spec 'cypress/integration/api/products/*.spec.ts' && npm run report:open",
+    "test:products:sort": "docker-compose run tests npx cypress run --spec 'cypress/integration/api/products/get-products-sorted-by-title-asc.spec.ts,cypress/integration/api/products/get-products-sorted-by-title-desc.spec.ts,cypress/integration/api/products/get-products-sorted-by-invalid-field.spec.ts' && npm run report:open",
     "test:products:categories": "docker-compose run tests npx cypress run --spec cypress/integration/api/products/get-all-products-categories.spec.ts && npm run report:open",
     "test:products:category-list": "docker-compose run tests npx cypress run --spec cypress/integration/api/products/get-category-list.spec.ts && npm run report:open",
     "test:products:by-category": "docker-compose run tests npx cypress run --spec cypress/integration/api/products/get-products-by-category.spec.ts && npm run report:open",
