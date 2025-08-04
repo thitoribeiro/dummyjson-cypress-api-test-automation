@@ -17,7 +17,10 @@
     "test:products:category-list": "docker-compose run tests npx cypress run --spec cypress/integration/api/products/get-category-list.spec.ts && npm run report:open",
     "test:products:by-category": "docker-compose run tests npx cypress run --spec cypress/integration/api/products/get-products-by-category.spec.ts && npm run report:open",
     "test:products:non-existent-category": "docker-compose run tests npx cypress run --spec cypress/integration/api/products/get-products-by-non-existent-category.spec.ts && npm run report:open",
-    "test:products:add": "docker-compose run tests npx cypress run --spec cypress/integration/api/products/post-add-product.spec.ts && npm run report:open"
+    "test:products:add": "docker-compose run tests npx cypress run --spec cypress/integration/api/products/post-add-product.spec.ts && npm run report:open",
+    "test:products:add-invalid": "docker-compose run tests npx cypress run --spec cypress/integration/api/products/post-add-product-invalid-data.spec.ts && npm run report:open",
+    "test:products:update": "docker-compose run tests npx cypress run --spec cypress/integration/api/products/put-update-product.spec.ts && npm run report:open",
+    "test:products:delete": "docker-compose run tests npx cypress run --spec cypress/integration/api/products/delete-product.spec.ts && npm run report:open"
   },
   "repository": {
     "type": "git",

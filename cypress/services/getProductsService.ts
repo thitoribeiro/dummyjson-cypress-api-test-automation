@@ -81,6 +81,21 @@ export const addProduct = (product: any) => {
   });
 };
 
+export const updateProduct = (id: number, product: any) => {
+  return cy.request({
+    method: 'PUT',
+    url: `/products/${id}`,
+    body: product
+  });
+};
+
+export const deleteProduct = (id: number) => {
+  return cy.request({
+    method: 'DELETE',
+    url: `/products/${id}`
+  });
+};
+
 
 
 
