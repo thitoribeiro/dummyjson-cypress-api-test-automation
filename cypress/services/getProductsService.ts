@@ -44,5 +44,14 @@ export function getProductsWithSelectedFields(fields: string) {
   })
 }
 
+export function getProductsSorted(sortBy: string, order: string) {
+  return cy.request({
+    method: 'GET',
+    url: `/products?sortBy=${sortBy}&order=${order}`,
+    failOnStatusCode: false,
+  })
+}
+
+
 
 

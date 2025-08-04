@@ -12,7 +12,8 @@
     "report:open": "open mochawesome-report/index.html",
     "test:docker:report": "npm run test:docker && npm run report:open",
     "test:open:report": "npm run test:docker:one -- cypress/integration/api/products/get-list-all-products.spec.ts && npm run report:open",
-    "test:products:get": "npm run test:docker:one -- cypress/integration/api/products/*.spec.ts && npm run report:open"
+    "test:products:get": "npm run test:docker:one -- cypress/integration/api/products/*.spec.ts && npm run report:open",
+    "test:products:sort": "npm run test:docker:one -- \"cypress/integration/api/products/get-products-sorted-by-title-asc.spec.ts,cypress/integration/api/products/get-products-sorted-by-title-desc.spec.ts,cypress/integration/api/products/get-products-sorted-by-invalid-field.spec.ts\" && npm run report:open"
   },
   "repository": {
     "type": "git",
