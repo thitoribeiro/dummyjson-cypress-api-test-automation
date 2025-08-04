@@ -1,7 +1,7 @@
 import { getProductsCategories } from '../../../services/getProductsService'
 
-describe('Feature: List Products Categories', () => {
-  it('Scenario: List all product categories', () => {
+describe('List Products Categories', () => {
+  it('List all product categories', () => {
     getProductsCategories().then((response) => {
       expect(response.status).to.eq(200)
       expect(response.body).to.be.an('array').and.not.be.empty

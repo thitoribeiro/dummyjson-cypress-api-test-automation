@@ -1,14 +1,7 @@
 import { searchProductsByTerm } from '../../../services/getProductsService'
 
-describe('Feature: Search products with a valid term', () => {
-  it(`Scenario: Search products with a valid term
-       Given the API is available
-       When I send a GET request to /products/search?q=phone
-       Then the response should have status 200
-       And the "products" list should contain at least one item
-       And the "total" field should be greater than 0
-       And each product should contain the mandatory fields: id, title, category`, () => {
-
+describe('Search products with a valid term', () => {
+  it('Search products with a valid term', () => {
     searchProductsByTerm('phone').then((response) => {
       expect(response.status).to.eq(200)
 

@@ -1,7 +1,7 @@
 import { getProductsSorted } from '../../../services/getProductsService'
 
-describe('Feature: List products sorted by title in descending order', () => {
-  it('Scenario: List products sorted by title in descending order', () => {
+describe('List products sorted by title in descending order', () => {
+  it('List products sorted by title in descending order', () => {
     let firstResponseTitles: any[]
 
     getProductsSorted('title', 'desc').then((response) => {

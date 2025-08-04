@@ -7,17 +7,17 @@
     "test:headless": "npx cypress run",
     "test:ui": "npx cypress open",
     "test:docker": "docker-compose up --build",
-    "test:docker:one": "docker-compose run tests npx cypress run --spec",
-    "test:docker:one:report": "npm run test:docker:one --",
+    
     "report:open": "open mochawesome-report/index.html",
     "test:docker:report": "npm run test:docker && npm run report:open",
-    "test:open:report": "npm run test:docker:one -- cypress/integration/api/products/get-list-all-products.spec.ts && npm run report:open",
-    "test:products:get": "npm run test:docker:one -- cypress/integration/api/products/*.spec.ts && npm run report:open",
-    "test:products:sort": "npm run test:docker:one -- \"cypress/integration/api/products/get-products-sorted-by-title-asc.spec.ts,cypress/integration/api/products/get-products-sorted-by-title-desc.spec.ts,cypress/integration/api/products/get-products-sorted-by-invalid-field.spec.ts\" && npm run report:open",
-    "test:products:categories": "npm run test:docker:one -- cypress/integration/api/products/get-all-products-categories.spec.ts && npm run report:open",
-    "test:products:category-list": "npm run test:docker:one -- cypress/integration/api/products/get-category-list.spec.ts && npm run report:open",
-    "test:products:by-category": "npm run test:docker:one -- cypress/integration/api/products/get-products-by-category.spec.ts && npm run report:open",
-    "test:products:non-existent-category": "npm run test:docker:one -- cypress/integration/api/products/get-products-by-non-existent-category.spec.ts && npm run report:open"
+    "test:open:report": "docker-compose run tests npx cypress run --spec cypress/integration/api/products/get-list-all-products.spec.ts && npm run report:open",
+    "test:products:get": "docker-compose run tests npx cypress run --spec \"cypress/integration/api/products/*.spec.ts\" && npm run report:open",
+    "test:products:sort": "docker-compose run tests npx cypress run --spec \"cypress/integration/api/products/get-products-sorted-by-title-asc.spec.ts,cypress/integration/api/products/get-products-sorted-by-title-desc.spec.ts,cypress/integration/api/products/get-products-sorted-by-invalid-field.spec.ts\" && npm run report:open",
+    "test:products:categories": "docker-compose run tests npx cypress run --spec cypress/integration/api/products/get-all-products-categories.spec.ts && npm run report:open",
+    "test:products:category-list": "docker-compose run tests npx cypress run --spec cypress/integration/api/products/get-category-list.spec.ts && npm run report:open",
+    "test:products:by-category": "docker-compose run tests npx cypress run --spec cypress/integration/api/products/get-products-by-category.spec.ts && npm run report:open",
+    "test:products:non-existent-category": "docker-compose run tests npx cypress run --spec cypress/integration/api/products/get-products-by-non-existent-category.spec.ts && npm run report:open",
+    "test:products:add": "docker-compose run tests npx cypress run --spec cypress/integration/api/products/post-add-product.spec.ts && npm run report:open"
   },
   "repository": {
     "type": "git",

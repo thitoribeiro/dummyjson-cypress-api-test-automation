@@ -73,6 +73,14 @@ export const getProductsByCategory = (category: string) => {
   });
 };
 
+export const addProduct = (product: any) => {
+  return cy.request({
+    method: 'POST',
+    url: '/products/add',
+    body: product
+  });
+};
+
 
 
 
